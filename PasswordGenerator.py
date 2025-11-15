@@ -1,4 +1,4 @@
-import random
+import secrets
 
 def generate_password(length, use_lowercase=True, use_uppercase=True, use_numbers=True, use_special=True):
     # Manually define character sets
@@ -23,7 +23,7 @@ def generate_password(length, use_lowercase=True, use_uppercase=True, use_number
         raise ValueError("You must select at least one character type!")
 
     # Generate the characters and combine them
-    password = ''.join(random.choice(characters) for _ in range(length))
+    password = ''.join(secrets.choice(characters) for _ in range(length))
     return password
 
 
