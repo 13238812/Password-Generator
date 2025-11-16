@@ -1,13 +1,13 @@
 import secrets
 
 def generate_password(length, use_lowercase=True, use_uppercase=True, use_numbers=True, use_special=True):
-    # Manually define character sets
+    # Characters sets defined
     lowercase = "abcdefghijklmnopqrstuvwxyz"
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     digits = "0123456789"
     special = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
-    # Build the character pool
+    # Selected characters are placed into a pool to be selected randomly
     characters = ""
     if use_lowercase:
         characters += lowercase
